@@ -24,8 +24,10 @@ const sacarTurno = () =>{
         alert ("Opcion incorrecta")
         return;
     }
-    let horarioElegido = horarios[opciones - 1]; //obtener horario
-    turnos.push(nombre + " es a las " + horarioElegido) //guarda en turnos
+    //obtener horario
+    let horarioElegido = horarios[opciones - 1]; 
+    //guarda en turnos
+    turnos.push(nombre + " es a las " + horarioElegido) 
 
     alert ( nombre + " a las " + horarioElegido)
 }
@@ -64,8 +66,8 @@ const cancelarTurno = () => {
         alert("Opción incorrecta")
         return
     }
-
-    let turnoCancelado = turnos.splice(opcion - 1, 1) // elimina 1 turno
+     // elimina 1 turno
+    let turnoCancelado = turnos.splice(opcion - 1, 1)
     alert("Se canceló el turno: " + turnoCancelado)
 }
 

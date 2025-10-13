@@ -107,7 +107,7 @@ botonEnviar.onclick = () => {
     contenedor.className = "alert alert-success"
     contenedor.innerText = `Su turno se registró correctamente, ${nombre} a las ${horario}.`
 
-    console.log (turnos)
+
 
     limpiarInputs ()
 

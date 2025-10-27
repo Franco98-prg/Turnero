@@ -135,3 +135,8 @@ button:hover{
 .offcanvas{
     background-color: rgb(157, 45, 25);
 }
+
+option:disabled {
+  color: gray;
+  background-color: #f0f0f05e;
+}

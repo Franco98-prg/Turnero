@@ -96,11 +96,12 @@
                         <input type="number" placeholder="Ingrese su dni" class="form-control" id="dniInput">
 
                         <p>Que dias deseas elegir para tu entrenamiento?</p>
-                        <select class="form-select" aria-label="Default select example" id="diasInput">
-                            <option value="" selected>Seleccione los días que prefieres</option>
-                            <option value="Lunes, Miércoles y Viernes">Lunes, Miércoles y Viernes</option>
-                            <option value="Martes y Jueves">Martes y Jueves</option>
-                        </select>
+                        <div id="diaturno">
+                            <div class="container mt-4" id="calendario">
+                                <label for="fecha" class="form-label">selecciona una fecha</label>
+                                <input type="date" class="form-control" id="diasInput"  max="2025-12-31">
+                            </div>
+                        </div>
                         <p>que horario deseas elegir?</p>
                         <select class="form-select" aria-label="Default select example" id="horarioInput">
                             <option value="" selected>Seleccione el horario</option>
@@ -132,19 +133,15 @@
                         <div id="contenedorBuscar"></div>
                         <button id="button-buscar">Buscar</button>
                         <button id= "button-eliminar">Eliminar su Turno</button>
+                        <button id="button-modificar">Modificar Turno</button>
                     </section>
 
                 </div>
                 <div class="col-lg-3"></div>
             </div>
-        <!--UTILIZAR EN LA PROX ENTREGA-->
-        <!-- </div>
-        <div id="diaturno">
-            <div class="container mt-4" id="calendario">
-                <label for="fecha" class="form-label">selecciona una fecha</label>
-                <input type="date" class="form-control" id="fecha">
-            </div>
-        </div> -->
+
+        </div>
+
 
 
 

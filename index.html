@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <!--JS-->
     <script defer src="./js/main.js"></script>
+    <script defer src="./js/turnos.js"></script>
     <!--CSS-->
     <link rel="stylesheet" href="./css/style.css">
     <title>Turnero General</title>
@@ -50,43 +51,18 @@
 
     <main>
         <h1>CALISTENIA</h1>
+
         <div class="container text-center">
             <div class="row">
                 <div class="col-lg-3"></div>
-                <div class="col-lg-6 col-sm-12 estructura">
+                <div class="col-lg-6 col-sm-12 estructura" >
                     <section>
                         <p>La calistenia es mucho más que ejercicio: es control, fuerza y equilibrio. Entrenamos con movimientos funcionales que desarrollan potencia, resistencia y coordinación, mejorando tu rendimiento físico y mental. Cada sesión busca desafiarte, superarte y ayudarte a descubrir de lo que sos capaz. No importa tu nivel, solo tus ganas de progresar.</p>
                         <p>Unite a nuestra comunidad y comenzá tu camino en la calistenia.</p>
-                        <div class="row">
-                            <div class="col-sm-6 mb-3 mb-sm-0">
-                                <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Plan Inicial “Empezá desde cero"</h5>
-                                    <h6 class="card-text">Ideal para principiantes.</h6>
-                                    <p>Acompañamiento personalizado</p>
-                                    <p>2 clases por semana</p>
-                                    <p>Enfoque en fundamentos y control corporal</p>
-                                    <h6>Perfecto para quienes inician o retoman el entrenamiento</h6>
-                                    <a href="#solicitar-turno" class="btn btn-primary">Inscribite</a>
-                                </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Plan Full  “Entrená sin límites”</h5>
-                                    <h6 class="card-text">Para quienes viven la calistenia.</h6>
-                                    <p>Entrenamientos grupales y comunidad activa</p>
-                                    <p>3 clases por semana</p>
-                                    <p>Acceso a rutinas avanzadas </p>
-                                    <h6>Entrená a tu ritmo y con tu energía</h6>
-                                    <a href="#solicitar-turno" class="btn btn-primary">Inscribite</a>
-                                </div>
-                                </div>
-                            </div>
+                        <div class = "row" id="cardContainer">
                         </div>
                         <p>¿Ya tenés un turno registrado?</p>
-                        <a href="#buscar-eliminar" class="btn">Buscar turno</a>
+                        <a href="#buscar-eliminar" class="btn">Buscar/Eliminar/Modificar</a>
 
 
                         <h3 id="solicitar-turno">Solicitar Turno</h3>
@@ -102,6 +78,7 @@
                                 <input type="date" class="form-control" id="diasInput"  max="2025-12-31">
                             </div>
                         </div>
+                        <div id="calendar"></div>
                         <p>que horario deseas elegir?</p>
                         <select class="form-select" aria-label="Default select example" id="horarioInput">
                             <option value="" selected>Seleccione el horario</option>
@@ -115,6 +92,13 @@
                             <option value="18:30">18:30</option>
                             <option value="19:30">19:30</option>
                             <option value="20:30">20:30</option>
+                        </select>
+                        <p>que plan deseas elegir?</p>
+                        <select class="form-select" aria-label="Default select example" id="planesInput">
+                            <option value=""selected>Seleccione un plan</option>
+                            <!-- <option value="Plan Inicial">Plan Inicial</option>
+                            <option value="Plan Progreso">Plan Progreso</option>
+                            <option value="Plan Full">Plan Full</option> -->
                         </select>
                             <div id="contenedor"></div>
                             <button id="button-enviar">ENVIAR</button>
@@ -162,6 +146,7 @@
 
     <!--BOOTSTRAP-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-
+    <!-- SWEETALERT -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

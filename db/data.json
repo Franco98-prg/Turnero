@@ -1,0 +1,31 @@
+[
+    {
+        "tipo": "Plan Inicial",
+        "titulo": "empeza desde cero",
+        "dias": "2 clases por semana",
+        "dirigido": "Ideal para principiantes.",
+        "rutinas": "Enfoque en fundamentos y control corporal",
+        "modalidad": "Acompanamiento personalizado",
+        "enfoque": "perfecto para personas que no tengan conocimiento previo."
+    },
+
+    {
+        "tipo": "Plan progreso",
+        "titulo": "subi tu nivel",
+        "dias": "3 clases por semana",
+        "dirigido": "Diseñado para quienes ya entrenan",
+        "rutinas": "Rutinas progresivas y ejercicios técnicos",
+        "modalidad": "Acompanamiento personalizado",
+        "enfoque": "perfecto para personas que tengan conocimiento previo."
+    },
+
+    {
+        "tipo": "Plan Full",
+        "titulo": "Clases sin limites",
+        "dias": "clases ilimitadas",
+        "dirigido": "Para quienes viven la calistenia",
+        "rutinas": "Acceso a rutinas avanzadas y asesoramiento técnico",
+        "modalidad": "acompanamiento o asesoramiento intensivo",
+        "enfoque": "perfecto para personas que ya hayan realizado calistenia"
+    }
+]

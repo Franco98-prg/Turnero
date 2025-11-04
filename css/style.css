@@ -1,6 +1,6 @@
 /*Estilo Body*/
 body{
-    background-color: rgb(157, 45, 25);
+    background-color: rgba(157, 45, 25, 0.844);
     color: rgb(0, 0, 0);
     text-transform: capitalize;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -25,7 +25,9 @@ h3 {
 
 }
 p{
-    font-size: 18px;
+    padding: 1px;
+    margin: 1px;
+    font-size: 16px;
 }
 h5{
     color: black;
@@ -103,6 +105,7 @@ button {
 
 button:hover{
     background-color: rgba(85, 85, 85, 0.447);
+    color: black;
 }
 
 .btn{
@@ -120,12 +123,17 @@ button:hover{
 }
 
 .card-body{
-    background-color: rgba(90, 34, 34, 0.323);
+    background-color: rgba(244, 238, 238, 0.299);
     display: inline-block;
     text-decoration: none;
-    border: 3px solid;
-    padding: 6px 14px;
-    border-radius: 5px;
+    border: 2px solid;
+    padding: 6px 1px;
+    border-radius: 1px;
+    margin-top: 5px;
+}
+.card{
+    background-color: rgba(77, 50, 50, 0.299);
+    border: 1px solid;
 }
 
 .estructura{
@@ -133,10 +141,32 @@ button:hover{
 }
 
 .offcanvas{
-    background-color: rgb(157, 45, 25);
+    background-color: rgb(236, 227, 225);
 }
 
 option:disabled {
   color: gray;
   background-color: #f0f0f05e;
+}
+
+.button-eliminar{
+    font-size: 12px;
+    border: 1px solid;
+    padding: 2px 2px;
+    border-radius: 10px;
+}
+
+.button-modificar{
+    font-size: 12px;
+    border: 1px solid;
+    padding: 2px 2px;
+    border-radius: 10px;
+}
+
+.alert-info {
+    background-color: rgba(244, 238, 238, 0.299);
+    display: inline-block;
+    text-decoration: none;
+    border: 1px none;
+    margin-top: 5px;
 }

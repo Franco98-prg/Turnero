@@ -23,6 +23,8 @@ class Cliente {
     }
 }
 
+
+
 //Inputs
 let nombreInput = document.getElementById ("nombreInput")
 let dniInput = document.getElementById ("dniInput")
@@ -30,7 +32,6 @@ let diaInput = document.getElementById ("diasInput")
 let horarioInput = document.getElementById ("horarioInput")
 let planesInput = document.getElementById("planesInput")
 let botonEnviar = document.getElementById ("button-enviar")
-let dniBuscarInput = document.getElementById("dniBuscarInput")
 //boton
 let buttonBuscar = document.getElementById("button-buscar")
 let botonEliminar = document.getElementById ("button-eliminar")
@@ -62,19 +63,18 @@ obtenerPlan()
 function renderizarPlanes (listaPlanes) {
     listaPlanes.forEach (planes =>{
         let card = document.createElement ("div")
-        card.innerHTML = `      <div class="col-sm-12 col-xl-12 mb-3 mb-sm-0">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">${planes.tipo}- "${planes.titulo}"</h5>
-                                            <h6 class="card-text">${planes.dirigido}</h6>
-                                            <p>${planes.rutinas}</p>
-                                            <p>A${planes.modalidad}</p>
-                                            <p>${planes.dias}</p>
-                                            <h6>${planes.enfoque}</h6>
-                                            <a href="#solicitar-turno" class="btn btn-primary">Inscribite</a>
-                                        </div>
-                                    </div>
-                                </div>`
+        card.className = "col-sm-6"
+        card.innerHTML = `  <div class= "card">
+                                <div class="card-body">
+                                    <h5 class="card-title">${planes.tipo}- "${planes.titulo}"</h5>
+                                    <h6 class="card-subtitle">(${planes.dirigido})</h6>
+                                    <p class= "card-text">${planes.rutinas}</p>
+                                    <p class= "card-text">${planes.modalidad}</p>
+                                    <p class= "card-text">${planes.dias}</p>
+                                    <h6 class="card-subtitle">${planes.enfoque}</h6>
+                                    <a href="#solicitar-turno" class="btn">Inscribite</a>
+                                </div>
+                            </div>`
         cardContainer.append(card)
         let addPlan = document.createElement ("div")
         addPlan.innerHTML = `<option value="${planes.tipo}">${planes.tipo}</option>`
@@ -90,17 +90,23 @@ function limpiarInputs () {
     diaInput.value = ""
     horarioInput.value = ""
     planesInput.value = ""
-    dniBuscarInput.value = ""
 }
+
+
 //PARA EVITAR FECHAS VIEJAS
 const hoy = new Date().toISOString().split("T")[0]
 diaInput.min = hoy
 
+
+
+
+//limpiar mensajes del contenedor
 function limpiarMensajes () {
     let contenedor = document.getElementById("contenedor")
     contenedor.innerHTML = ""
     contenedor.className = ""
 }
+
 //funcion alertas
 function mostrarMensaje(contenedor, tipo, mensaje, tiempo = 8000) {
     contenedor.className = `alert alert-${tipo}`
@@ -112,11 +118,7 @@ function mostrarMensaje(contenedor, tipo, mensaje, tiempo = 8000) {
 }
 
 
-//funcion calendario
-const calendarInput = document.querySelector('#input');
-new Calendar(calendarInput, {
-  inputMode: true,
-});;
+
 
 //CARGAR TURNOS
 botonEnviar.onclick = () => {
@@ -177,8 +179,6 @@ botonEnviar.onclick = () => {
     localStorage.setItem("Clientes", JSON.stringify(turnos))
 
 
-    // mostrarMensaje(contenedor, "success", `Su turno para el "${plan}" se registró correctamente, ${nombre} el dia ${dia}, a las ${horario}.`)
-
     Swal.fire({
         position: "center",
         title: "Turno registrado correctamente",
@@ -192,13 +192,11 @@ botonEnviar.onclick = () => {
         icon: "success",
         showConfirmButton: true,
     })
-
+    mostrarTurnos()
     limpiarInputs ()
 
-
+    
 }
-
-
 
 
 

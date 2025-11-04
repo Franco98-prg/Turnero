@@ -27,5 +27,17 @@
         "rutinas": "Acceso a rutinas avanzadas y asesoramiento técnico",
         "modalidad": "acompanamiento o asesoramiento intensivo",
         "enfoque": "perfecto para personas que ya hayan realizado calistenia"
+    },
+
+    {
+        "tipo": "Plan Movilidad y control",
+        "titulo": "Equilibrio y técnica",
+        "dias": "2 clases por semana",
+        "dirigido": "Ideal para complementar cualquier otro plan",
+        "rutinas": "Enfoque en movilidad, equilibrio y respiración",
+        "modalidad": "Entrená con consciencia y mejora tu rendimiento general",
+        "enfoque": "Perfecto para mejorar flexibilidad, estabilidad y control postural"
     }
+
+
 ]
